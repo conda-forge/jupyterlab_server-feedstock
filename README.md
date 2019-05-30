@@ -1,7 +1,3 @@
-<!--
-# -*- mode: jinja -*-
--->
-
 About jupyterlab_server
 =======================
 
@@ -18,8 +14,17 @@ Summary: A set of server components for JupyterLab and JupyterLab like applicati
 Current build status
 ====================
 
-All platforms:
-[![noarch](https://img.shields.io/circleci/project/github/conda-forge/jupyterlab_server-feedstock/master.svg?label=noarch)](https://circleci.com/gh/conda-forge/jupyterlab_server-feedstock)
+
+<table><tr>
+    
+    <td>All platforms:</td>
+    <td>
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3054&branchName=master">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyterlab_server-feedstock?branchName=master">
+      </a>
+    </td>
+  </tr>
+</table>
 
 Current release info
 ====================
