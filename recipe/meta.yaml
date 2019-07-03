@@ -23,7 +23,7 @@ requirements:
   run:
     - python >=3.5
     - json5
-    - notebook
+    - notebook >=4.2.0
 
 test:
   imports:
