@@ -1,4 +1,4 @@
-{% set version = "1.0.4" %}
+{% set version = "1.0.5" %}
 
 package:
   name: jupyterlab_server
@@ -7,7 +7,7 @@ package:
 source:
   fn: jupyterlab_server-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: 74f45573005f099ca0be672977cb1bff82e885852165504f74ac97a2fb313980
+  sha256: 3c1dda15c945983fb544e26d14e3deeef4969cf2facc8dd18d2b9d1e4073f9bb
 
 build:
     number: 0
@@ -25,6 +25,7 @@ requirements:
     - json5
     - jsonschema >=3.0.1
     - notebook >=4.2.0
+    - jinja2 =>2.10
 
 test:
   imports:
