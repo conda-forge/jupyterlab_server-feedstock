@@ -26,6 +26,7 @@ requirements:
     - jsonschema >=3.0.1
     - notebook >=4.2.0
     - jinja2 =>2.10
+    - requests
 
 test:
   imports:
