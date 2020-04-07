@@ -10,7 +10,7 @@ source:
   sha256: bac27e2ea40f686e592d6429877e7d46947ea76c08c878081b028c2c89f71733
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
@@ -18,23 +18,26 @@ requirements:
   host:
     - pip
     - python >=3.5
-    - setuptools
 
   run:
     - python >=3.5
     - json5
     - jsonschema >=3.0.1
     - notebook >=4.2.0
-    - jinja2 =>2.10
+    - jinja2 >=2.10
     - requests
 
 test:
+  requires:
+    - pip
   imports:
     - jupyterlab_server
+  commands:
+    - python -m pip check
 
 about:
-  home: http://github.com/jupyterlab/jupyterlab_server
-  license: BSD 3-Clause
+  home: https://github.com/jupyterlab/jupyterlab_server
+  license: BSD-3-Clause
   license_file: LICENSE
   summary: A set of server components for JupyterLab and JupyterLab like applications.
 
@@ -44,3 +47,4 @@ extra:
     - blink1073
     - afshin
     - SylvainCorlay
+    - bollwyvl
