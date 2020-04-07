@@ -1,9 +1,9 @@
 About jupyterlab_server
 =======================
 
-Home: http://github.com/jupyterlab/jupyterlab_server
+Home: https://github.com/jupyterlab/jupyterlab_server
 
-Package license: BSD 3-Clause
+Package license: BSD-3-Clause
 
 Feedstock license: BSD 3-Clause
 
@@ -119,5 +119,6 @@ Feedstock Maintainers
 * [@SylvainCorlay](https://github.com/SylvainCorlay/)
 * [@afshin](https://github.com/afshin/)
 * [@blink1073](https://github.com/blink1073/)
+* [@bollwyvl](https://github.com/bollwyvl/)
 * [@jasongrout](https://github.com/jasongrout/)
 
