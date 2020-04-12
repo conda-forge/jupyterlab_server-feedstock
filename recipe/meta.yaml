@@ -1,4 +1,4 @@
-{% set version = "1.1.0" %}
+{% set version = "1.1.1" %}
 
 package:
   name: jupyterlab_server
@@ -7,10 +7,10 @@ package:
 source:
   fn: jupyterlab_server-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: bac27e2ea40f686e592d6429877e7d46947ea76c08c878081b028c2c89f71733
+  sha256: b5921872746b1ca109d1852196ed11e537f8aad67a1933c1d4a8ac63f8e61cca
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
