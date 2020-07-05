@@ -5,7 +5,7 @@ Home: https://github.com/jupyterlab/jupyterlab_server
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: BSD-3-Clause
 
 Summary: A set of server components for JupyterLab and JupyterLab like applications.
 
