@@ -21,9 +21,11 @@ requirements:
 
   run:
     - python >=3.6
+    - babel
     - json5
     - jsonschema >=3.0.1
     - jinja2 >=2.10
+    - packaging
     - requests
     - jupyter_server >=1.0.1,<2.0.0
 
