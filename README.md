@@ -119,4 +119,5 @@ Feedstock Maintainers
 * [@blink1073](https://github.com/blink1073/)
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@jasongrout](https://github.com/jasongrout/)
+* [@jtpio](https://github.com/jtpio/)
 
