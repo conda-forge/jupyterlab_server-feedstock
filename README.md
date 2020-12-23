@@ -5,11 +5,9 @@ Home: https://github.com/jupyterlab/jupyterlab_server
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD-3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab_server-feedstock/blob/master/LICENSE.txt)
 
 Summary: A set of server components for JupyterLab and JupyterLab like applications.
-
-
 
 Current build status
 ====================
@@ -121,4 +119,5 @@ Feedstock Maintainers
 * [@blink1073](https://github.com/blink1073/)
 * [@bollwyvl](https://github.com/bollwyvl/)
 * [@jasongrout](https://github.com/jasongrout/)
+* [@jtpio](https://github.com/jtpio/)
 
