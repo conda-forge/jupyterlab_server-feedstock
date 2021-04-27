@@ -33,11 +33,21 @@ requirements:
 
 test:
   requires:
+    - ipykernel
+    - openapi-core
     - pip
+    - pytest >=5.3.2
+    - pytest-console-scripts
+    - pytest-cov
+    - pytest-tornasync
+    - ruamel.yaml
+    - strict-rfc3339
+    - wheel
   imports:
     - jupyterlab_server
   commands:
     - pip check
+    - pytest --pyargs jupyterlab_server --cov jupyterlab_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 59
 
 about:
   home: https://github.com/jupyterlab/jupyterlab_server
