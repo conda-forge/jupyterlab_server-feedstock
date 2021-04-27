@@ -1,14 +1,12 @@
-{% set version = "2.4.0" %}
-{% set hash = "2a7f0b125a59a7cc543f62e5f9dea50b44b3459b3f679db7e3dbe0f8616f90bc" %}
+{% set version = "2.5.0" %}
 
 package:
   name: jupyterlab_server
   version: {{ version }}
 
 source:
-  fn: jupyterlab_server-{{ version }}.tar.gz
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: {{ hash }}
+  sha256: 4c2c482cc91b7439ea5415f8f85ded95059fb9cdab03f5f0e6338246830c2a5c
 
 build:
   number: 0
@@ -17,26 +15,39 @@ build:
 
 requirements:
   host:
-    - pip
     - python >=3.6
+    - jupyter-packaging >=0.9,<1
+    - jupyter_server
+    - pip
 
   run:
     - python >=3.6
     - babel
+    - jinja2 >=2.10
     - json5
     - jsonschema >=3.0.1
-    - jinja2 >=2.10
+    - jupyter_server >=1.4,<2
+    - jupyter-packaging >=0.9,<2
     - packaging
     - requests
-    - jupyter_server >=1.1.0,<2.0.0
 
 test:
   requires:
+    - ipykernel
+    - openapi-core
     - pip
+    - pytest >=5.3.2
+    - pytest-console-scripts
+    - pytest-cov
+    - pytest-tornasync
+    - ruamel.yaml
+    - strict-rfc3339
+    - wheel
   imports:
     - jupyterlab_server
   commands:
-    - python -m pip check
+    - pip check
+    - pytest -vv --pyargs jupyterlab_server --cov jupyterlab_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 59
 
 about:
   home: https://github.com/jupyterlab/jupyterlab_server
