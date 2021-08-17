@@ -9,6 +9,8 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab_serv
 
 Summary: A set of server components for JupyterLab and JupyterLab like applications.
 
+Documentation: https://jupyterlab-server.readthedocs.io
+
 Current build status
 ====================
 
