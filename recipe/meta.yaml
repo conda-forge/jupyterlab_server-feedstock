@@ -34,7 +34,7 @@ requirements:
 test:
   requires:
     - ipykernel
-    - openapi-core <0.14
+    - openapi-core >=0.14,<0.15
     - pip
     - pytest >=5.3.2
     - pytest-console-scripts
@@ -54,6 +54,7 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE
   summary: A set of server components for JupyterLab and JupyterLab like applications.
+  doc_url: https://jupyterlab-server.readthedocs.io
 
 extra:
   recipe-maintainers:
