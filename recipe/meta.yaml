@@ -47,7 +47,7 @@ test:
     - jupyterlab_server
   commands:
     - pip check
-    - pytest -vv --pyargs jupyterlab_server --cov jupyterlab_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 65
+    - pytest -vv --pyargs jupyterlab_server --cov jupyterlab_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 60
   downstreams:
     - jupyterlab
 
