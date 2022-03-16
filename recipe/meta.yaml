@@ -1,4 +1,4 @@
-{% set version = "2.10.3" %}
+{% set version = "2.11.0" %}
 
 package:
   name: jupyterlab_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: 3fb84a5813d6d836ceda773fb2d4e9ef3c7944dbc1b45a8d59d98641a80de80a
+  sha256: 865e0b1fddefb173b1877dfe0ae115e1df94d9b4ca745d53e57f7b4e4f882396
 
 build:
   number: 0
@@ -15,26 +15,30 @@ build:
 
 requirements:
   host:
-    - python >=3.6
-    - jupyter-packaging >=0.9,<2
     - jupyter_server
+    - jupyter-packaging >=0.9
     - pip
+    - python >=3.7
 
   run:
-    - python >=3.6
     - babel
     - entrypoints >=0.2.2
-    - jinja2 >=2.10
+    - jinja2 >=3.0.3
     - json5
     - jsonschema >=3.0.1
-    - jupyter_server >=1.4,<2
+    - jupyter_server >=1.8,<2
     - packaging
+    - python >=3.7
     - requests
 
 test:
+  source_files:
+    - tests
+    - jupyterlab_server/rest-api.yml
   requires:
     - ipykernel
-    - openapi-core >=0.14,<0.15
+    - openapi-core >=0.14.2
+    - openapi-spec-validator <0.5
     - pip
     - pytest >=5.3.2
     - pytest-console-scripts
@@ -47,7 +51,7 @@ test:
     - jupyterlab_server
   commands:
     - pip check
-    - pytest -vv --pyargs jupyterlab_server --cov jupyterlab_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 60
+    - cd tests && pytest -vv --cov jupyterlab_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 68
   downstreams:
     - jupyterlab
 
