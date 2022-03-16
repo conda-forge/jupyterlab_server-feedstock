@@ -5,7 +5,7 @@ Home: https://github.com/jupyterlab/jupyterlab_server
 
 Package license: BSD-3-Clause
 
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab_server-feedstock/blob/master/LICENSE.txt)
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/jupyterlab_server-feedstock/blob/main/LICENSE.txt)
 
 Summary: A set of server components for JupyterLab and JupyterLab like applications.
 
@@ -17,8 +17,8 @@ Current build status
 
 <table><tr><td>All platforms:</td>
     <td>
-      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3054&branchName=master">
-        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyterlab_server-feedstock?branchName=master">
+      <a href="https://dev.azure.com/conda-forge/feedstock-builds/_build/latest?definitionId=3054&branchName=main">
+        <img src="https://dev.azure.com/conda-forge/feedstock-builds/_apis/build/status/jupyterlab_server-feedstock?branchName=main">
       </a>
     </td>
   </tr>
