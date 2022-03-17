@@ -35,6 +35,7 @@ test:
   source_files:
     - tests
     - jupyterlab_server/rest-api.yml
+    - jupyterlab_server/test_data
   requires:
     - ipykernel
     - openapi-core >=0.14.2
