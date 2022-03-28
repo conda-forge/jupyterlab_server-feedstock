@@ -1,4 +1,4 @@
-{% set version = "2.11.0" %}
+{% set version = "2.12.0" %}
 
 package:
   name: jupyterlab_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: 865e0b1fddefb173b1877dfe0ae115e1df94d9b4ca745d53e57f7b4e4f882396
+  sha256: 00e0f4b4c399f55938323ea10cf92d915288fe12753e35d1069f6ca08b72abbf
 
 build:
   number: 0
@@ -34,7 +34,7 @@ requirements:
 test:
   source_files:
     - tests
-    - jupyterlab_server/rest-api.yml
+    - jupyterlab_server/test_data
   requires:
     - ipykernel
     - openapi-core >=0.14.2
