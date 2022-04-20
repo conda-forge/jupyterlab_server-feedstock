@@ -9,7 +9,7 @@ source:
   sha256: 2040298a133458aa22f287a877d6bb91ff973f6298d562264f9f7b75e92a5ace
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
@@ -22,7 +22,7 @@ requirements:
 
   run:
     - babel
-    - entrypoints >=0.2.2
+    - importlib_metadata
     - jinja2 >=3.0.3
     - json5
     - jsonschema >=3.0.1
