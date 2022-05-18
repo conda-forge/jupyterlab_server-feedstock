@@ -1,4 +1,4 @@
-{% set version = "2.13.0" %}
+{% set version = "2.14.0" %}
 
 package:
   name: jupyterlab_server
@@ -6,23 +6,22 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: 2040298a133458aa22f287a877d6bb91ff973f6298d562264f9f7b75e92a5ace
+  sha256: b04eaf68fe1ef96f70dd38b256417abe0b6ba1a07dd8ca0c97da5b0ebade57ec
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - jupyter_server
-    - jupyter-packaging >=0.9
+    - hatchling >=0.25
     - pip
     - python >=3.7
 
   run:
     - babel
-    - importlib_metadata
+    - importlib_metadata >=3.6
     - jinja2 >=3.0.3
     - json5
     - jsonschema >=3.0.1
