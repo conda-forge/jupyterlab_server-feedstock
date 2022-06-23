@@ -9,7 +9,7 @@ source:
   sha256: b04eaf68fe1ef96f70dd38b256417abe0b6ba1a07dd8ca0c97da5b0ebade57ec
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
@@ -38,6 +38,9 @@ test:
     - ipykernel
     - openapi-core >=0.14.2
     - openapi-spec-validator <0.5
+    # TODO: remove after openapi-spec-validator/openapi-schema-validator are in sync
+    - openapi-spec-validator =0.4.0
+    - openapi-schema-validator =0.2.3
     - pip
     - pytest >=5.3.2
     - pytest-console-scripts
