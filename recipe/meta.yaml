@@ -1,4 +1,4 @@
-{% set version = "2.15.1" %}
+{% set version = "2.15.2" %}
 
 package:
   name: jupyterlab_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: 305313970e131c590cf77bb6b8ca7e98591bc304111e8d103bc91d212e94796f
+  sha256: c0bcdd4606e640e6f16d236ceac55336dc8bf98cbbce067af27524ccc2fb2640
 
 build:
   number: 0
@@ -21,7 +21,7 @@ requirements:
 
   run:
     - babel
-    - importlib_metadata >=3.6
+    - importlib-metadata >=3.6
     - jinja2 >=3.0.3
     - json5
     - jsonschema >=3.0.1
@@ -36,7 +36,7 @@ test:
     - jupyterlab_server/test_data
   requires:
     - ipykernel
-    - openapi-core >=0.14.2
+    - openapi-core >=0.14.2,<0.15.0
     - openapi-spec-validator >=0.4.0,<0.5
     - pip
     - pytest >=5.3.2
