@@ -43,6 +43,7 @@ test:
     - pytest-console-scripts
     - pytest-cov
     - pytest-tornasync
+    - requests_mock
     - ruamel.yaml
     - strict-rfc3339
     - wheel
