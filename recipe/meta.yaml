@@ -37,12 +37,12 @@ test:
   requires:
     - ipykernel
     - openapi-core >=0.14.2,<0.15.0
-    - openapi-spec-validator >=0.4.0,<0.5
+    - openapi-spec-validator >=0.4.0,<0.6
     - pip
     - pytest >=7.0
     - pytest-console-scripts
     - pytest-cov
-    - pytest-tornasync
+    - pytest-jupyter-server
     - requests-mock
     - ruamel.yaml
     - strict-rfc3339
