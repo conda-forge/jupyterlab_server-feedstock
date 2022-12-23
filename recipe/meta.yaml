@@ -37,7 +37,8 @@ test:
   requires:
     - ipykernel
     - openapi-core >=0.14.2,<0.15.0
-    - openapi-spec-validator >=0.4.0,<0.6
+    # TODO: normalize these upstream
+    - openapi-spec-validator >=0.4.0,<0.5
     - pip
     - pytest >=7.0
     - pytest-console-scripts
