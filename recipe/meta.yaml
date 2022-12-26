@@ -1,4 +1,4 @@
-{% set version = "2.16.6" %}
+{% set version = "2.17.0" %}
 
 package:
   name: jupyterlab_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: 5061b0ca0731d4ab346aac9ced7ad419f6751b058b3405eedfee66d013d8c355
+  sha256: a5b6923e2a9ea299f98de5b50cde90722d74ef8f0713a75cbcbfbfd3f41ad058
 
 build:
   number: 0
@@ -15,20 +15,20 @@ build:
 
 requirements:
   host:
-    - hatchling >=0.25
+    - hatchling >=1.5
     - pip
     - python >=3.7
 
   run:
-    - babel
+    - babel >=2.10
     - importlib-metadata >=4.8.3
     - jinja2 >=3.0.3
-    - json5
-    - jsonschema >=3.0.1
-    - jupyter_server >=1.8,<3
-    - packaging
+    - json5 >=0.9.0
+    - jsonschema >=4.17.3
+    - jupyter_server >=1.21,<3
+    - packaging >=21.3
     - python >=3.7
-    - requests
+    - requests >=2.28
 
 test:
   source_files:
@@ -36,23 +36,23 @@ test:
     - jupyterlab_server/test_data
   requires:
     - ipykernel
-    - openapi-core >=0.14.2,<0.15.0
-    # TODO: normalize these upstream
-    - openapi-spec-validator >=0.4.0,<0.5
+    - openapi-core >=0.16.1
+    - openapi-spec-validator >=0.5.1
     - pip
     - pytest >=7.0
     - pytest-console-scripts
     - pytest-cov
-    - pytest-jupyter-server
+    - pytest-jupyter-server >=0.6
+    - pytest-timeout
     - requests-mock
     - ruamel.yaml
     - strict-rfc3339
-    - wheel
+    - werkzeug
   imports:
     - jupyterlab_server
   commands:
     - pip check
-    - cd tests && pytest -vv --cov jupyterlab_server --cov-report term-missing:skip-covered --no-cov-on-fail --cov-fail-under 68
+    - cd tests && pytest -vv --cov=jupyterlab_server --cov-report=term-missing:skip-covered --no-cov-on-fail --cov-fail-under=85
   downstreams:
     - jupyterlab
 
