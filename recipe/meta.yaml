@@ -1,4 +1,4 @@
-{% set version = "2.17.0" %}
+{% set version = "2.18.0" %}
 
 package:
   name: jupyterlab_server
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: a5b6923e2a9ea299f98de5b50cde90722d74ef8f0713a75cbcbfbfd3f41ad058
+  sha256: 7830f085debc9417a72ebf482dc5cb477d6bf76884826c73182fa457c7829df4
 
 build:
   number: 0
@@ -42,7 +42,7 @@ test:
     - pytest >=7.0
     - pytest-console-scripts
     - pytest-cov
-    - pytest-jupyter-server >=0.6
+    - pytest-jupyter-server >=0.6.2
     - pytest-timeout
     - requests-mock
     - ruamel.yaml
