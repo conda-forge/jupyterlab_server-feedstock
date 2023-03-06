@@ -36,8 +36,8 @@ test:
     - jupyterlab_server/test_data
   requires:
     - ipykernel
-    - openapi-core >=0.16.1
-    - openapi-spec-validator >=0.5.1
+    - openapi-core >=0.16.1,<0.17.0
+    - openapi-spec-validator >=0.5.1,<0.6.0
     - pip
     - pytest >=7.0
     - pytest-console-scripts
