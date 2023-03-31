@@ -7,3 +7,5 @@ github:
 conda_build:
   pkg_format: '2'
 build_with_mambabuild: false
+bot:
+  inspection: hint-all
