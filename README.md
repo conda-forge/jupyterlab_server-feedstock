@@ -30,6 +30,7 @@ Current release info
 | Name | Downloads | Version | Platforms |
 | --- | --- | --- | --- |
 | [![Conda Recipe](https://img.shields.io/badge/recipe-jupyterlab_server-green.svg)](https://anaconda.org/conda-forge/jupyterlab_server) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyterlab_server.svg)](https://anaconda.org/conda-forge/jupyterlab_server) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyterlab_server.svg)](https://anaconda.org/conda-forge/jupyterlab_server) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyterlab_server.svg)](https://anaconda.org/conda-forge/jupyterlab_server) |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-jupyterlab_server--with--openapi-green.svg)](https://anaconda.org/conda-forge/jupyterlab_server-with-openapi) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/jupyterlab_server-with-openapi.svg)](https://anaconda.org/conda-forge/jupyterlab_server-with-openapi) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/jupyterlab_server-with-openapi.svg)](https://anaconda.org/conda-forge/jupyterlab_server-with-openapi) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/jupyterlab_server-with-openapi.svg)](https://anaconda.org/conda-forge/jupyterlab_server-with-openapi) |
 
 Installing jupyterlab_server
 ============================
@@ -41,16 +42,16 @@ conda config --add channels conda-forge
 conda config --set channel_priority strict
 ```
 
-Once the `conda-forge` channel has been enabled, `jupyterlab_server` can be installed with `conda`:
+Once the `conda-forge` channel has been enabled, `jupyterlab_server, jupyterlab_server-with-openapi` can be installed with `conda`:
 
 ```
-conda install jupyterlab_server
+conda install jupyterlab_server jupyterlab_server-with-openapi
 ```
 
 or with `mamba`:
 
 ```
-mamba install jupyterlab_server
+mamba install jupyterlab_server jupyterlab_server-with-openapi
 ```
 
 It is possible to list all of the versions of `jupyterlab_server` available on your platform with `conda`:
