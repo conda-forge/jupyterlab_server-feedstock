@@ -12,8 +12,6 @@ build:
   number: 0
   noarch: python
 
-
-
 requirements:
   host:
     - python >=3.8
