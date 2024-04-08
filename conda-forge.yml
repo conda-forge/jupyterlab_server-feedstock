@@ -6,6 +6,6 @@ github:
   tooling_branch_name: main
 conda_build:
   pkg_format: '2'
-build_with_mambabuild: false
+conda_build_tool: conda-build
 bot:
   inspection: hint-all
