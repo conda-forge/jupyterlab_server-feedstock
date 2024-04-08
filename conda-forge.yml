@@ -1,11 +1,10 @@
 bot:
   automerge: true
+  inspection: hint-all
+conda_build:
+  pkg_format: '2'
+conda_build_tool: conda-build
 conda_forge_output_validation: true
 github:
   branch_name: main
   tooling_branch_name: main
-conda_build:
-  pkg_format: '2'
-build_with_mambabuild: false
-bot:
-  inspection: hint-all
