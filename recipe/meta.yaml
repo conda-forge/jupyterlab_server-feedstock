@@ -1,4 +1,4 @@
-{% set version = "2.26.0" %}
+{% set version = "2.27.0" %}
 
 package:
   name: jupyterlab_server-split
@@ -6,7 +6,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
-  sha256: 9b3ba91cf2837f7f124fca36d63f3ca80ace2bed4898a63dd47e6598c1ab006f
+  sha256: b03382075545981dd0ab7a9e4ffff74b6ed2b424c92e32fcc1c0bd65dafcb56d
 
 build:
   number: 0
