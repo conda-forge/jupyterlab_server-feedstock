@@ -1,71 +1,61 @@
 {% set version = "2.27.3" %}
 
+{% set PYTHON = PYTHON | default("$PYTHON") %}
+
 package:
-  name: jupyterlab_server-split
+  name: jupyterlab_server
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/j/jupyterlab_server/jupyterlab_server-{{ version }}.tar.gz
   sha256: eb36caca59e74471988f0ae25c77945610b887f777255aa21f8065def9e51ed4
 
 build:
-  number: 0
+  number: 1
   noarch: python
+  script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
 
 requirements:
   host:
-    - python >=3.8
+    - hatchling >=1.5
+    - pip
+    - python {{ python_min }}
   run:
-    - python >=3.8
+    - babel >=2.10
+    - importlib-metadata >=4.8.3
+    - jinja2 >=3.0.3
+    - json5 >=0.9.0
+    - jsonschema >=4.18
+    - jupyter_server >=1.21,<3
+    - packaging >=21.3
+    - python >={{ python_min }}
+    - requests >=2.31
+  run_constrained:
+    # hard dep in jupyterlab_server-with-openapi:run
+    - openapi-core >=0.18.0,<0.19.0
 
 test:
+  requires:
+    - pip
+    - python {{ python_min }}
+  imports:
+    - jupyterlab_server
   commands:
-    - echo tests in outputs
+    - pip check
+  downstreams:
+    - jupyterlab
 
 outputs:
   - name: jupyterlab_server
-    build:
-      noarch: python
-      script: {{ PYTHON }} -m pip install . --no-deps --ignore-installed --no-cache-dir -vvv
-    requirements:
-      host:
-        - hatchling >=1.5
-        - pip
-        - python >=3.8
-      run:
-        - babel >=2.10
-        - importlib-metadata >=4.8.3
-        - jinja2 >=3.0.3
-        - json5 >=0.9.0
-        - jsonschema >=4.18
-        - jupyter_server >=1.21,<3
-        - packaging >=21.3
-        - python >=3.8
-        - requests >=2.31
-      run_constrained:
-        # hard dep in jupyterlab_server-with-openapi:run
-        - openapi-core >=0.18.0,<0.19.0
-    test:
-      requires:
-        - pip
-      imports:
-        - jupyterlab_server
-      commands:
-        - pip check
-      downstreams:
-        - jupyterlab
 
   - name: jupyterlab_server-with-openapi
     build:
-      noarch: python
+      noarch: generic
     requirements:
-      host:
-        - python >=3.8
       run:
         - {{ pin_subpackage("jupyterlab_server", max_pin="x.x.x") }}
         # version pin in jupyterlab_server-with-openapi:run_constrained
         - openapi-core
-        - python >=3.8
         - ruamel.yaml
     test:
       source_files:
@@ -84,6 +74,7 @@ outputs:
         - requests-mock
         - strict-rfc3339
         - werkzeug
+        - python {{ python_min }}
       imports:
         - jupyterlab_server
       commands:
