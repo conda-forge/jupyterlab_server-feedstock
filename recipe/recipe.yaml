@@ -2,7 +2,7 @@
 schema_version: 1
 
 context:
-  version: "2.28.0"
+  version: "2.28.1"
   python_check_max: "3.14"
 
 recipe:
@@ -11,7 +11,7 @@ recipe:
 
 source:
   url: https://pypi.org/packages/source/j/jupyterlab_server/jupyterlab_server-${{ version }}.tar.gz
-  sha256: 35baa81898b15f93573e2deca50d11ac0ae407ebb688299d3a5213265033712c
+  sha256: 0c3c2418d51021ce280916e63dfe4cba8386b4e2787be5c25433c98f560ddb31
 
 build:
   number: 0
@@ -21,7 +21,8 @@ outputs:
       name: jupyterlab_server
     build:
       noarch: python
-      script: ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
+      script:
+        - ${{ PYTHON }} -m pip install . -vv --no-deps --no-build-isolation --disable-pip-version-check
     requirements:
       host:
         - hatchling >=1.7
@@ -31,7 +32,7 @@ outputs:
         - babel >=2.10
         - jinja2 >=3.0.3
         - json5 >=0.9.0
-        - jsonschema >=4.18
+        - jsonschema >=4.18.0
         - jupyter_server >=1.21,<3
         - packaging >=21.3
         - python >=${{ python_min }}
@@ -87,7 +88,8 @@ about:
   license: BSD-3-Clause
   license_file: LICENSE
   summary: A set of server components for JupyterLab and JupyterLab like applications.
-  homepage: https://github.com/jupyterlab/jupyterlab_server
+  homepage: https://pypi.org/project/jupyterlab-server
+  repository: https://github.com/jupyterlab/jupyterlab_server
   documentation: https://jupyterlab-server.readthedocs.io
 
 extra:
